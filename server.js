@@ -1,19 +1,14 @@
-const {ApolloServer, gql} = require("apollo-server");
+require('dotenv').config
+// import dotenv from "dotenv"
+// import { PrismaClient } from "@prisma/client";
+import {ApolloServer, gql} from "apollo-server";
+import schema from "./schema";
 
-const typeDefs = gql`
-    type Query {
-        hello: String
-    }   
-   `;
-const resolvers = {
-    Query:{
-        hello: ()=>'baby',
-    }
-}
 
 const server = new ApolloServer({
-    typeDefs,
-    resolvers
+    schema
 });
 
-server.listen().then(()=> console.log("Server is running on http://localhost:4000/"))
+const PORT = process.env.PORT
+
+server.listen().then(()=> console.log(`Server is running on http://localhost:${PORT}/`))
