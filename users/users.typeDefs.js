@@ -10,17 +10,16 @@ export default gql`
         createdAt:String!
         updatedAt:String!
     }
-    type CreateAccountResult {
+    type CreateAccountResult{
         ok: Boolean!
         error: String
       }
     type LoginResult {
-        ok:Boolean!
-        token:String
-        error:String
-    }
-    
-    type Mutation{
+        ok: Boolean!
+        token: String
+        error: String
+      }
+    type Mutation{  
         createAccount(
             userName:String!
             phoneNumber:String!

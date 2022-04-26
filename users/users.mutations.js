@@ -28,11 +28,11 @@ export default {
                     }
                 });
                 if(existingUser) {
-                    throw new Error("This phone number/email is already taken.  ")
+                    throw new Error("This phone number/email is already taken.")
                 }
                 //hash password
                 const uglyPassword = await bcrypt.hash(password, 10);
-                await client.user.create({
+                return client.user.create({
                     data:{
                         userName,
                         phoneNumber,
@@ -40,10 +40,7 @@ export default {
                         email,
                         password:uglyPassword,
                     }
-                });
-                return {
-                    ok: true,
-                  };
+                })
             }catch(e){
                 return e;
             }
