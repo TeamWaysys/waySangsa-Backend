@@ -14,6 +14,6 @@ type Product{
 }
 type Query {
     getProductByModel(productModelNo:String!):Product!
-    getProductByType(productType:String):[Product!]
+    getProductByType(productType:String!):[Product!]
 }
 `
