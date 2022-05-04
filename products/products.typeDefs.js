@@ -12,8 +12,4 @@ type Product{
     createdAt:String!
     updatedAt:String!
 }
-type Query {
-    getProductByModel(productModelNo:String!):Product!
-    getProductByType(productType:String!):[Product!]
-}
 `

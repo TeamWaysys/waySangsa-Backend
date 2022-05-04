@@ -14,20 +14,4 @@ export default gql`
         createdAt:String!
         updatedAt:String!
     }
-    
-    type Mutation{
-        createOrder(
-            orderUser:String!
-            orderSiteAddr:String!
-            siteChiefName:String!
-            siteChiefPhoneNum:String!
-            siteChiefEmail:String!
-            orderWantDate:String!
-            orderList:String!
-        ):orderHistory!
-    }
-
-    type Query {
-        orderByUser(orderUser:String!):orderHistory!
-    }
 `
