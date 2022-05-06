@@ -4,23 +4,25 @@ import client from "../../client"
 export default {
     Mutation: {
         createOrder: async (_,
-            {orderUser,
-            orderSiteAddr,
-            siteChiefName,
-            siteChiefPhoneNum,
-            siteChiefEmail,
-            orderWantDate,
-            orderList
+            {   orderUserID,
+                orderCompany,
+                deliveryDate,
+                orderSiteAddr,
+                siteChiefName,
+                siteChiefPhoneNum,
+                siteChiefEmail,
+                orderList
         }) =>{
             try{
                 return client.orderHistory.create({
                     data:{
-                        orderUser,
+                        orderUserID,
+                        orderCompany,
+                        deliveryDate,
                         orderSiteAddr,
                         siteChiefName,
                         siteChiefPhoneNum,
                         siteChiefEmail,
-                        orderWantDate,
                         orderList
                     }
             })}
