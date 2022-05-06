@@ -10,7 +10,7 @@ export default gql`
             orderSiteAddr:String
             siteChiefName:String
             siteChiefPhoneNum:String
-            siteChiefEmail;String
+            siteChiefEmail:String
             orderList:String!
         ):orderHistory!
     }
