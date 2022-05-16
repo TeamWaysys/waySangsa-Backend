@@ -8,6 +8,8 @@ const PORT = process.env.PORT;
 const server = new ApolloServer({
     typeDefs,
     resolvers,
+    playground:false,
+    introspection :true,
     context: async ({ req }) => {
         return {
         loggedInUser: await getUser(req.headers.token),
