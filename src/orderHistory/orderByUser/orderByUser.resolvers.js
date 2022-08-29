@@ -2,9 +2,9 @@ import client from "../../client";
 
 export default {
     Query:{
-        orderByUser:(_, {orderUser}) => client.orderHistory.findUnique({
+        orderByUser:(_, {orderUserID}) => client.orderHistory.findUnique({
             where: {
-                orderUser,
+                orderUserID,
             }
         })
     },
