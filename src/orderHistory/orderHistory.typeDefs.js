@@ -4,7 +4,7 @@ import { gql } from "apollo-server";
 export default gql`
     type orderHistory {
         id:String!
-        orderUserID:String
+        orderUserID:String!
         orderCompany:String
         deliveryDate:String
         orderSiteAddr:String
