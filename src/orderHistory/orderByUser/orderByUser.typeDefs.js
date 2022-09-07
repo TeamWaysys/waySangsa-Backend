@@ -3,6 +3,6 @@ import { gql } from "apollo-server";
 
 export default gql`
     type Query {
-        orderByUser(orderUserID:String!):[orderHistory!]
+        orderByUser(orderUserID:String!):orderHistory!
     }
 `
